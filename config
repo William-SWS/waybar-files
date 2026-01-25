@@ -1,0 +1,56 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "custom/nvidia",
+    "cpu",
+    "memory",
+    "temperature",
+    "pulseaudio",
+    "network",
+    "tray"
+  ],
+
+  "custom/nvidia": {
+    "exec": "~/.config/waybar/scripts/nvidia.sh",
+    "interval": 2,
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "  {:%H:%M}"
+  },
+
+  "cpu": {
+    "format": "  {usage}%"
+  },
+
+  "memory": {
+    "format": "  {percentage}%"
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "  {temperatureC}°C"
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "  Wired"
+  },
+
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": " muted"
+  }
+}
