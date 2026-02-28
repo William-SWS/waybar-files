@@ -4,21 +4,58 @@
     min-height: 0;
 }
 
+/* Bar */
 window#waybar {
     background: rgba(15, 15, 20, 0.92);
-    color: #ffffff;
+    color: #e5e5e5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+/* Workspaces */
 #workspaces button {
-    padding: 0 8px;
-    color: #bbbbbb;
+    padding: 0 10px;
+    margin: 4px 2px;
+    color: #888888;
+    background: transparent;
+    border-radius: 6px;
 }
 
 #workspaces button.active {
     color: #ffffff;
-    border-bottom: 2px solid #5fd7ff;
+    background: rgba(95, 215, 255, 0.18);
 }
 
-#clock, #cpu, #memory, #temperature, #pulseaudio, #network, #tray {
+/* Center clock */
+#clock {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Right modules */
+#cpu, #memory, #temperature,
+#pulseaudio, #network, #tray {
     padding: 0 10px;
+}
+
+/* Soft colors */
+#cpu { color: #ffaf5f; }
+#memory { color: #5fd7ff; }
+#temperature { color: #ff6f6f; }
+#pulseaudio { color: #afff5f; }
+#network { color: #ffd75f; }
+
+/* Warnings */
+#temperature.critical {
+    background: rgba(255, 95, 95, 0.25);
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+/* Hover feedback */
+#cpu:hover,
+#memory:hover,
+#pulseaudio:hover,
+#network:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
 }
